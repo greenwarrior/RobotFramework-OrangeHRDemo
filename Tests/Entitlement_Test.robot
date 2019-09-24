@@ -12,92 +12,84 @@ Test Teardown  CommonWeb.End Web Test
 *** Keywords ***
 
 *** Test Cases ***
-User should be to able cancel unsaved employee entitlement
-    [Tags]  pass
+1 User should be to able cancel unsaved employee entitlement
+    [Tags]  smoke
     LoginApp.Login to account  ${ADMIN_USER}
-    EntitlementApp.Navigate to 'Entitlement' Page
-    EntitlementApp.Navigate to 'Add Entitlements' Page
-    EntitlementApp.Verify 'Add Leave Entitlement' Page is Displayed
-    EntitlementApp.Fill in Name of Employee  ${E_ENTITLEMENT_SINGLE}
-    EntitlementApp.Add Employee Leave Entitlement Details  ${E_ENTITLEMENT_SINGLE}
-    EntitlementApp.Cancel Current Leave Entitlement
-    EntitlementApp.Verify Leave Entitlement is Not Applied   ${E_ENTITLEMENT_SINGLE}  ${LEAVE_LEAVE_ENTITLEMENT_URL}
+    EntitlementApp.Navigate to "Entitlement" Page
+    #EntitlementApp.Navigate to "Add Leave Entitlements' Page
+    #EntitlementApp.Fill in Employee Name  ${E_ENTITLEMENT_SINGLE}
+    #EntitlementApp.Add Entitlement Details (Type, Period, Number)  ${E_ENTITLEMENT_SINGLE}
+    #EntitlementApp.Cancel Current Leave Entitlement
+    #EntitlementApp.Verify Leave Entitlement is Not Applied   ${E_ENTITLEMENT_SINGLE}
 
-User should be able to add initial employee entitlement
-    [Tags]  pass
-    # Pre-condition
+
+2 User should be able to add initial employee entitlement
+    [Tags]  smoke
     LoginApp.Login to account  ${ADMIN_USER}
-    EntitlementApp.Navigate to 'Entitlement' Page
-    EntitlementApp.Navigate to 'Add Entitlements' Page
-    EntitlementApp.Verify 'Add Leave Entitlement' Page is Displayed
-    EntitlementApp.Fill in Name of Employee  ${E_ENTITLEMENT_SINGLE}
-    EntitlementApp.Add Employee Leave Entitlement Details  ${E_ENTITLEMENT_SINGLE}
+    EntitlementApp.Navigate to "Entitlement" Page
+    EntitlementApp.Navigate to "Add Leave Entitlements' Page
+    EntitlementApp.Fill in Employee Name  ${E_ENTITLEMENT_SINGLE}
+    EntitlementApp.Add Entitlement Details (Type, Period, Number)  ${E_ENTITLEMENT_SINGLE}
     EntitlementApp.Save Current Employee Entitlement
-    EntitlementApp.Verify Leave Entitlement is Applied Successfully   ${E_ENTITLEMENT_SINGLE}  ${LEAVE_LEAVE_ENTITLEMENT_URL}
+    EntitlementApp.Verify Leave Entitlement is Applied Successfully   ${E_ENTITLEMENT_SINGLE}
 
-User should be able to update existing employee entitlement
-    [Tags]  pass
+3 User should be able to update existing employee entitlement
+    [Tags]  smoke
     # Pre-condition
     LoginApp.Login to account  ${ADMIN_USER}
-    EntitlementApp.Navigate to 'Entitlement' Page
-    EntitlementApp.Navigate to 'Add Entitlements' Page
-    EntitlementApp.Verify 'Add Leave Entitlement' Page is Displayed
-    EntitlementApp.Fill in Name of Employee  ${E_ENTITLEMENT_SINGLE}
-    EntitlementApp.Add Employee Leave Entitlement Details  ${E_ENTITLEMENT_SINGLE}
+    EntitlementApp.Navigate to "Entitlement" Page
+    EntitlementApp.Navigate to "Add Leave Entitlements' Page
+    EntitlementApp.Fill in Employee Name  ${E_ENTITLEMENT_SINGLE}
+    EntitlementApp.Add Entitlement Details (Type, Period, Number)  ${E_ENTITLEMENT_SINGLE}
     EntitlementApp.Save Current Employee Entitlement
     EntitlementApp.Confirm to Update Employee Entitlement
-    EntitlementApp.Verify Employee Entitlement is Updated
+    EntitlementApp.Verify Employee Entitlement is Updated  ${E_ENTITLEMENT_SINGLE}
 
-User should be able to delete existing employee entitlement
-    [Tags]  pass
-    # Pre-condition
+4 User should be able to delete existing employee entitlement
+    [Tags]  smoke
     LoginApp.Login to account  ${ADMIN_USER}
-    EntitlementApp.Navigate to 'Entitlement' Page
+    EntitlementApp.Navigate to "Entitlement" Page
     EntitlementApp.Navigate to 'Employee Entitlements' Page
-    EntitlementApp.Search Employee   ${E_ENTITLEMENT_SINGLE}
-    EntitlementApp.Select All Entitlement of Searched Employee
+    EntitlementApp.Search for Employee Entitlement to Delete (Employee Name,Type, Period)   ${E_ENTITLEMENT_SINGLE}
     EntitlementApp.Delete Selected Entitlement
-    EntitlementApp.Confirm to Delete Entitlement - OK
-    Verify Selected Employee Entitlement is Deleted
+    EntitlementApp.Confirm to Delete Entitlement
+    EntitlementApp.Verify Selected Employee Entitlement is Deleted
 
-User should be able to cancel unsaved entitlements of multiple employees
-    [Tags]  pass
+
+
+5 User should be able to cancel unsaved entitlements for multiple employees
+    [Tags]  smoke
     LoginApp.Login to account  ${ADMIN_USER}
-    EntitlementApp.Navigate to 'Entitlement' Page
-    EntitlementApp.Navigate to 'Add Entitlements' Page
-    EntitlementApp.Verify 'Add Leave Entitlement' Page is Displayed
-    EntitlementApp.Add Leave Entitlements for Multiple Employees  ${E_ENTITLEMENT_MULTI}
-    EntitlementApp.Add Employee Leave Entitlement Details  ${E_ENTITLEMENT_MULTI}
+    EntitlementApp.Navigate to "Entitlement" Page
+    EntitlementApp.Navigate to "Add Leave Entitlements' Page
+    EntitlementApp.Check Off Entitlements for Multiple Employees
+    EntitlementApp.Add Leave Entitlement Details (Location,Sub Unit, Type, Period, Number)  ${E_ENTITLEMENT_MULTI}
     EntitlementApp.Cancel Current Leave Entitlement
-    EntitlementApp.Verify Leave Entitlement is Cancelled
+    EntitlementApp.Verify Leave Entitlement is Not Applied  ${E_ENTITLEMENT_MULTI}
 
-User should be able to cancel saved entitlements of multiple employees
-    [Tags]  pass
-    # Pre-condition
+6 User should be able to cancel saved entitlements for multiple employees
+    [Tags]  smoke
     LoginApp.Login to account  ${ADMIN_USER}
-    EntitlementApp.Navigate to 'Entitlement' Page
-    EntitlementApp.Navigate to 'Add Entitlements' Page
-    EntitlementApp.Verify 'Add Leave Entitlement' Page is Displayed
-    EntitlementApp.Add Leave Entitlements for Multiple Employees  ${E_ENTITLEMENT_MULTI}
-    EntitlementApp.Add Employee Leave Entitlement Details  ${E_ENTITLEMENT_MULTI}
+   EntitlementApp.Navigate to "Entitlement" Page
+    EntitlementApp.Navigate to "Add Leave Entitlements' Page
+    EntitlementApp.Check Off Entitlements for Multiple Employees
+    EntitlementApp.Add Leave Entitlement Details (Location,Sub Unit, Type, Period, Number)  ${E_ENTITLEMENT_MULTI}
     EntitlementApp.Save Current Employee Entitlement
-    EntitlementApp.Verify Matching Employees Assigned to Current Entitlements
-    EntitlementApp.Cancel Current Multi Employee Leave Entitlement
-    EntitlementApp.Verify Leave Entitlement is Cancelled
+    EntitlementApp.Entitlement for Multiple Matching Employees Popup Message is Displayed
+    EntitlementApp.Cancel Saved Multi Employee Leave Entitlements
+    EntitlementApp.Verify Entitlement To Multiple Employees is Not Applied  ${E_ENTITLEMENT_MULTI}
 
-User should be able add saved entitlements of multiple employees
-    [Tags]  pass
-    # Pre-condition
+7 User should be able to add saved entitlements for multiple employees
+    [Tags]  smoke
     LoginApp.Login to account  ${ADMIN_USER}
-    EntitlementApp.Navigate to 'Entitlement' Page
-    EntitlementApp.Navigate to 'Add Entitlements' Page
-    EntitlementApp.Verify 'Add Leave Entitlement' Page is Displayed
-    EntitlementApp.Add Leave Entitlements for Multiple Employees  ${E_ENTITLEMENT_MULTI}
-    EntitlementApp.Add Employee Leave Entitlement Details  ${E_ENTITLEMENT_MULTI}
+    EntitlementApp.Navigate to "Entitlement" Page
+    EntitlementApp.Navigate to "Add Leave Entitlements' Page
+    EntitlementApp.Check Off Entitlements for Multiple Employees
+    EntitlementApp.Add Leave Entitlement Details (Location,Sub Unit, Type, Period, Number)  ${E_ENTITLEMENT_MULTI}
     EntitlementApp.Save Current Employee Entitlement
-    EntitlementApp.Verify Matching Employees Assigned to Current Entitlements
-    EntitlementApp.Confirm Saving Current Multi Employee Leave Entitlement
-    EntitlementApp.Verify Leave Entitlement is Applied Successfully - Multiple  ${LEAVE_LEAVE_ENTITLEMENT_URL}  ${LEAVE.EMPLOYEE_NAME_INPUT_ID_VALUE}
+    EntitlementApp.Entitlement for Multiple Matching Employees Popup Message is Displayed
+    EntitlementApp.Confirm Saved Multi Employee Leave Entitlements
+    EntitlementApp.Verify Entitlements To Multiple Employess Are Applied
 
 
 

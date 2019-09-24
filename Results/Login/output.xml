@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20190924 17:43:15.102" rpa="false">
+<suite id="s1" name="Login Test" source="C:\Learn\RobotFramework\RobotFrameworkDemo\OrangeHRDemo\tests\login_test.robot">
+<test id="s1-t1" name="User should be able to view landing page">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>30 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20190924 17:43:15.414" endtime="20190924 17:43:15.414"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190924 17:43:15.414" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg timestamp="20190924 17:43:15.977" level="DEBUG">POST http://127.0.0.1:52248/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}}</msg>
+<msg timestamp="20190924 17:43:15.977" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:52248</msg>
+<msg timestamp="20190924 17:43:18.022" level="DEBUG">http://127.0.0.1:52248 "POST /session HTTP/1.1" 200 682</msg>
+<msg timestamp="20190924 17:43:18.022" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:18.022" level="DEBUG">POST http://127.0.0.1:52248/session/a2fe138329e2bcbaef9d4eeb8fae0992/timeouts {"script": 30000}</msg>
+<msg timestamp="20190924 17:43:18.022" level="DEBUG">http://127.0.0.1:52248 "POST /session/a2fe138329e2bcbaef9d4eeb8fae0992/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:18.022" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:18.022" level="DEBUG">POST http://127.0.0.1:52248/session/a2fe138329e2bcbaef9d4eeb8fae0992/timeouts {"implicit": 0}</msg>
+<msg timestamp="20190924 17:43:18.022" level="DEBUG">http://127.0.0.1:52248 "POST /session/a2fe138329e2bcbaef9d4eeb8fae0992/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:18.038" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:18.038" level="DEBUG">POST http://127.0.0.1:52248/session/a2fe138329e2bcbaef9d4eeb8fae0992/url {"url": "about:blank"}</msg>
+<msg timestamp="20190924 17:43:18.079" level="DEBUG">http://127.0.0.1:52248 "POST /session/a2fe138329e2bcbaef9d4eeb8fae0992/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:18.080" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:18.080" level="DEBUG">Opened browser with session id a2fe138329e2bcbaef9d4eeb8fae0992.</msg>
+<status status="PASS" starttime="20190924 17:43:15.414" endtime="20190924 17:43:18.080"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20190924 17:43:18.081" level="DEBUG">POST http://127.0.0.1:52248/session/a2fe138329e2bcbaef9d4eeb8fae0992/window/maximize {}</msg>
+<msg timestamp="20190924 17:43:19.226" level="DEBUG">http://127.0.0.1:52248 "POST /session/a2fe138329e2bcbaef9d4eeb8fae0992/window/maximize HTTP/1.1" 200 51</msg>
+<msg timestamp="20190924 17:43:19.226" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:18.081" endtime="20190924 17:43:19.226"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:15.414" endtime="20190924 17:43:19.226"></status>
+</kw>
+<kw name="Navigate to Landing Page" library="LoginApp">
+<kw name="Navigate to" library="Landing">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:19.226" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<msg timestamp="20190924 17:43:19.226" level="DEBUG">POST http://127.0.0.1:52248/session/a2fe138329e2bcbaef9d4eeb8fae0992/url {"url": "https://opensource-demo.orangehrmlive.com/"}</msg>
+<msg timestamp="20190924 17:43:20.130" level="DEBUG">http://127.0.0.1:52248 "POST /session/a2fe138329e2bcbaef9d4eeb8fae0992/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:20.131" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:19.226" endtime="20190924 17:43:20.131"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:19.226" endtime="20190924 17:43:20.131"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:19.226" endtime="20190924 17:43:20.132"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 s</arg>
+</arguments>
+<msg timestamp="20190924 17:43:25.134" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190924 17:43:20.132" endtime="20190924 17:43:25.134"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<msg timestamp="20190924 17:43:25.135" level="DEBUG">Closing browser with session id a2fe138329e2bcbaef9d4eeb8fae0992.</msg>
+<msg timestamp="20190924 17:43:25.135" level="DEBUG">DELETE http://127.0.0.1:52248/session/a2fe138329e2bcbaef9d4eeb8fae0992 {}</msg>
+<msg timestamp="20190924 17:43:25.257" level="DEBUG">http://127.0.0.1:52248 "DELETE /session/a2fe138329e2bcbaef9d4eeb8fae0992 HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:25.257" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:25.135" endtime="20190924 17:43:27.401"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:25.134" endtime="20190924 17:43:27.401"></status>
+</kw>
+<tags>
+<tag>landing</tag>
+</tags>
+<status status="PASS" starttime="20190924 17:43:15.414" endtime="20190924 17:43:27.401" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Test multiple login scenarios messages">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>30 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20190924 17:43:27.401" endtime="20190924 17:43:27.401"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190924 17:43:27.401" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg timestamp="20190924 17:43:27.948" level="DEBUG">POST http://127.0.0.1:52283/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}}</msg>
+<msg timestamp="20190924 17:43:27.948" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:52283</msg>
+<msg timestamp="20190924 17:43:29.838" level="DEBUG">http://127.0.0.1:52283 "POST /session HTTP/1.1" 200 682</msg>
+<msg timestamp="20190924 17:43:29.838" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:29.838" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/timeouts {"script": 30000}</msg>
+<msg timestamp="20190924 17:43:29.838" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:29.838" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:29.838" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/timeouts {"implicit": 0}</msg>
+<msg timestamp="20190924 17:43:29.854" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:29.854" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:29.854" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/url {"url": "about:blank"}</msg>
+<msg timestamp="20190924 17:43:29.884" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:29.885" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:29.885" level="DEBUG">Opened browser with session id ffa5ef7eefc066f1e844b3c9da385205.</msg>
+<status status="PASS" starttime="20190924 17:43:27.401" endtime="20190924 17:43:29.885"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20190924 17:43:29.887" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/window/maximize {}</msg>
+<msg timestamp="20190924 17:43:31.003" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/window/maximize HTTP/1.1" 200 51</msg>
+<msg timestamp="20190924 17:43:31.003" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:29.886" endtime="20190924 17:43:31.003"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:27.401" endtime="20190924 17:43:31.003"></status>
+</kw>
+<kw name="Test Multiple Login Scenarios" library="LoginApp">
+<arguments>
+<arg>${UNREGISTERED_USER}</arg>
+</arguments>
+<kw name="Navigate to Landing Page" library="LoginApp">
+<kw name="Navigate to" library="Landing">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:31.003" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<msg timestamp="20190924 17:43:31.003" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/url {"url": "https://opensource-demo.orangehrmlive.com/"}</msg>
+<msg timestamp="20190924 17:43:32.097" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:32.098" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:31.003" endtime="20190924 17:43:32.098"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:31.003" endtime="20190924 17:43:32.099"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:31.003" endtime="20190924 17:43:32.099"></status>
+</kw>
+<kw name="Attempt Login" library="SignIn">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Enter Credentials" library="SignIn">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials.UserName}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${LOGIN_USER_INPUT}</arg>
+<arg>${Credentials.UserName}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_USER_INPUT}</arg>
+<arg>${Credentials.UserName}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:32.103" level="INFO">Typing text 'SuperAdmin' into text field 'id=txtUsername'.</msg>
+<msg timestamp="20190924 17:43:32.103" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/elements {"using": "css selector", "value": "[id=\"txtUsername\"]"}</msg>
+<msg timestamp="20190924 17:43:32.124" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20190924 17:43:32.124" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:32.124" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/6ee0080b-4bc9-4d77-a5ba-dfb460190829/clear {"id": "6ee0080b-4bc9-4d77-a5ba-dfb460190829"}</msg>
+<msg timestamp="20190924 17:43:32.164" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/element/6ee0080b-4bc9-4d77-a5ba-dfb460190829/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:32.164" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:32.165" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/6ee0080b-4bc9-4d77-a5ba-dfb460190829/value {"text": "SuperAdmin", "value": ["S", "u", "p", "e", "r", "A", "d", "m", "i", "n"], "id": "6ee0080b-4bc9-4d77-a5ba-dfb460190829"}</msg>
+<msg timestamp="20190924 17:43:32.251" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/element/6ee0080b-4bc9-4d77-a5ba-dfb460190829/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:32.252" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:32.102" endtime="20190924 17:43:32.252"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:32.101" endtime="20190924 17:43:32.252"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials.Password}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${LOGIN_PASSWORD_INPUT}</arg>
+<arg>${Credentials.Password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_PASSWORD_INPUT}</arg>
+<arg>${Credentials.Password}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:32.254" level="INFO">Typing text 'admin123' into text field 'id=txtPassword'.</msg>
+<msg timestamp="20190924 17:43:32.255" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/elements {"using": "css selector", "value": "[id=\"txtPassword\"]"}</msg>
+<msg timestamp="20190924 17:43:32.274" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20190924 17:43:32.274" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:32.275" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/a08808aa-050b-46ad-b7a2-70a78f1babe9/clear {"id": "a08808aa-050b-46ad-b7a2-70a78f1babe9"}</msg>
+<msg timestamp="20190924 17:43:32.307" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/element/a08808aa-050b-46ad-b7a2-70a78f1babe9/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:32.308" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:32.308" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/a08808aa-050b-46ad-b7a2-70a78f1babe9/value {"text": "admin123", "value": ["a", "d", "m", "i", "n", "1", "2", "3"], "id": "a08808aa-050b-46ad-b7a2-70a78f1babe9"}</msg>
+<msg timestamp="20190924 17:43:32.380" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/element/a08808aa-050b-46ad-b7a2-70a78f1babe9/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:32.380" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:32.254" endtime="20190924 17:43:32.380"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:32.253" endtime="20190924 17:43:32.381"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:32.100" endtime="20190924 17:43:32.381"></status>
+</kw>
+<kw name="Click Login" library="SignIn">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:32.382" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<msg timestamp="20190924 17:43:32.382" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/elements {"using": "css selector", "value": "[id=\"btnLogin\"]"}</msg>
+<msg timestamp="20190924 17:43:32.400" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20190924 17:43:32.401" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:32.401" level="DEBUG">GET http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/850af414-e5ea-44ec-880e-2914911008cf/name {"id": "850af414-e5ea-44ec-880e-2914911008cf"}</msg>
+<msg timestamp="20190924 17:43:32.409" level="DEBUG">http://127.0.0.1:52283 "GET /session/ffa5ef7eefc066f1e844b3c9da385205/element/850af414-e5ea-44ec-880e-2914911008cf/name HTTP/1.1" 200 17</msg>
+<msg timestamp="20190924 17:43:32.410" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:32.410" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/850af414-e5ea-44ec-880e-2914911008cf/click {"id": "850af414-e5ea-44ec-880e-2914911008cf"}</msg>
+<msg timestamp="20190924 17:43:32.829" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/element/850af414-e5ea-44ec-880e-2914911008cf/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:32.830" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:32.382" endtime="20190924 17:43:32.830"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:32.381" endtime="20190924 17:43:32.830"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:32.099" endtime="20190924 17:43:32.831"></status>
+</kw>
+<kw name="Verify Login Page Error Message" library="SignIn">
+<arguments>
+<arg>${Credentials.ExpectedErrorMessage}</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:32.832" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/frame {"id": null}</msg>
+<msg timestamp="20190924 17:43:32.836" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/frame HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:32.836" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:32.837" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/elements {"using": "xpath", "value": "//*[contains(., 'Invalid credentials')]"}</msg>
+<msg timestamp="20190924 17:43:32.862" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/elements HTTP/1.1" 200 801</msg>
+<msg timestamp="20190924 17:43:32.862" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:32.862" level="INFO">Current page contains text 'Invalid credentials'.</msg>
+<status status="PASS" starttime="20190924 17:43:32.832" endtime="20190924 17:43:32.863"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:32.863" level="INFO">Invalid credentials</msg>
+<status status="PASS" starttime="20190924 17:43:32.863" endtime="20190924 17:43:32.863"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:32.831" endtime="20190924 17:43:32.863"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:31.003" endtime="20190924 17:43:32.863"></status>
+</kw>
+<kw name="Test Multiple Login Scenarios" library="LoginApp">
+<arguments>
+<arg>${INCORRECT_PASSWORD_USER}</arg>
+</arguments>
+<kw name="Navigate to Landing Page" library="LoginApp">
+<kw name="Navigate to" library="Landing">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:32.865" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<msg timestamp="20190924 17:43:32.865" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/url {"url": "https://opensource-demo.orangehrmlive.com/"}</msg>
+<msg timestamp="20190924 17:43:33.017" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:33.018" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:32.865" endtime="20190924 17:43:33.018"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:32.865" endtime="20190924 17:43:33.018"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:32.864" endtime="20190924 17:43:33.019"></status>
+</kw>
+<kw name="Attempt Login" library="SignIn">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Enter Credentials" library="SignIn">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials.UserName}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${LOGIN_USER_INPUT}</arg>
+<arg>${Credentials.UserName}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_USER_INPUT}</arg>
+<arg>${Credentials.UserName}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:33.021" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<msg timestamp="20190924 17:43:33.022" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/elements {"using": "css selector", "value": "[id=\"txtUsername\"]"}</msg>
+<msg timestamp="20190924 17:43:33.036" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20190924 17:43:33.037" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:33.037" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/b6dc82d2-f986-4e94-9d32-352f3ebf3109/clear {"id": "b6dc82d2-f986-4e94-9d32-352f3ebf3109"}</msg>
+<msg timestamp="20190924 17:43:33.069" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/element/b6dc82d2-f986-4e94-9d32-352f3ebf3109/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:33.069" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:33.069" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/b6dc82d2-f986-4e94-9d32-352f3ebf3109/value {"text": "Admin", "value": ["A", "d", "m", "i", "n"], "id": "b6dc82d2-f986-4e94-9d32-352f3ebf3109"}</msg>
+<msg timestamp="20190924 17:43:33.120" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/element/b6dc82d2-f986-4e94-9d32-352f3ebf3109/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:33.121" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:33.021" endtime="20190924 17:43:33.121"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:33.020" endtime="20190924 17:43:33.121"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials.Password}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${LOGIN_PASSWORD_INPUT}</arg>
+<arg>${Credentials.Password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_PASSWORD_INPUT}</arg>
+<arg>${Credentials.Password}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:33.124" level="INFO">Typing text 'admin123p' into text field 'id=txtPassword'.</msg>
+<msg timestamp="20190924 17:43:33.125" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/elements {"using": "css selector", "value": "[id=\"txtPassword\"]"}</msg>
+<msg timestamp="20190924 17:43:33.138" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20190924 17:43:33.139" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:33.139" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/cfcd7513-74fb-4e6e-8a82-254f98a03408/clear {"id": "cfcd7513-74fb-4e6e-8a82-254f98a03408"}</msg>
+<msg timestamp="20190924 17:43:33.166" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/element/cfcd7513-74fb-4e6e-8a82-254f98a03408/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:33.166" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:33.167" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/cfcd7513-74fb-4e6e-8a82-254f98a03408/value {"text": "admin123p", "value": ["a", "d", "m", "i", "n", "1", "2", "3", "p"], "id": "cfcd7513-74fb-4e6e-8a82-254f98a03408"}</msg>
+<msg timestamp="20190924 17:43:33.229" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/element/cfcd7513-74fb-4e6e-8a82-254f98a03408/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:33.230" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:33.123" endtime="20190924 17:43:33.230"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:33.122" endtime="20190924 17:43:33.230"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:33.020" endtime="20190924 17:43:33.230"></status>
+</kw>
+<kw name="Click Login" library="SignIn">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:33.232" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<msg timestamp="20190924 17:43:33.232" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/elements {"using": "css selector", "value": "[id=\"btnLogin\"]"}</msg>
+<msg timestamp="20190924 17:43:33.244" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20190924 17:43:33.245" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:33.245" level="DEBUG">GET http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/d654fca3-4ef3-4b78-bb1f-022c9bdaf13f/name {"id": "d654fca3-4ef3-4b78-bb1f-022c9bdaf13f"}</msg>
+<msg timestamp="20190924 17:43:33.251" level="DEBUG">http://127.0.0.1:52283 "GET /session/ffa5ef7eefc066f1e844b3c9da385205/element/d654fca3-4ef3-4b78-bb1f-022c9bdaf13f/name HTTP/1.1" 200 17</msg>
+<msg timestamp="20190924 17:43:33.251" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:33.252" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/d654fca3-4ef3-4b78-bb1f-022c9bdaf13f/click {"id": "d654fca3-4ef3-4b78-bb1f-022c9bdaf13f"}</msg>
+<msg timestamp="20190924 17:43:33.726" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/element/d654fca3-4ef3-4b78-bb1f-022c9bdaf13f/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:33.726" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:33.231" endtime="20190924 17:43:33.727"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:33.231" endtime="20190924 17:43:33.727"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:33.019" endtime="20190924 17:43:33.727"></status>
+</kw>
+<kw name="Verify Login Page Error Message" library="SignIn">
+<arguments>
+<arg>${Credentials.ExpectedErrorMessage}</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:33.729" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/frame {"id": null}</msg>
+<msg timestamp="20190924 17:43:33.733" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/frame HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:33.734" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:33.734" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/elements {"using": "xpath", "value": "//*[contains(., 'Invalid credentials')]"}</msg>
+<msg timestamp="20190924 17:43:33.752" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/elements HTTP/1.1" 200 801</msg>
+<msg timestamp="20190924 17:43:33.752" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:33.752" level="INFO">Current page contains text 'Invalid credentials'.</msg>
+<status status="PASS" starttime="20190924 17:43:33.728" endtime="20190924 17:43:33.752"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:33.753" level="INFO">Invalid credentials</msg>
+<status status="PASS" starttime="20190924 17:43:33.752" endtime="20190924 17:43:33.753"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:33.728" endtime="20190924 17:43:33.753"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:32.864" endtime="20190924 17:43:33.753"></status>
+</kw>
+<kw name="Test Multiple Login Scenarios" library="LoginApp">
+<arguments>
+<arg>${BLANK_CREDENTIALS_USER}</arg>
+</arguments>
+<kw name="Navigate to Landing Page" library="LoginApp">
+<kw name="Navigate to" library="Landing">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:33.756" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<msg timestamp="20190924 17:43:33.757" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/url {"url": "https://opensource-demo.orangehrmlive.com/"}</msg>
+<msg timestamp="20190924 17:43:33.917" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:33.917" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:33.756" endtime="20190924 17:43:33.918"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:33.755" endtime="20190924 17:43:33.918"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:33.754" endtime="20190924 17:43:33.918"></status>
+</kw>
+<kw name="Attempt Login" library="SignIn">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Enter Credentials" library="SignIn">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials.UserName}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${LOGIN_USER_INPUT}</arg>
+<arg>${Credentials.UserName}</arg>
+</arguments>
+<status status="PASS" starttime="20190924 17:43:33.920" endtime="20190924 17:43:33.921"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials.Password}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${LOGIN_PASSWORD_INPUT}</arg>
+<arg>${Credentials.Password}</arg>
+</arguments>
+<status status="PASS" starttime="20190924 17:43:33.922" endtime="20190924 17:43:33.923"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:33.919" endtime="20190924 17:43:33.923"></status>
+</kw>
+<kw name="Click Login" library="SignIn">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:33.925" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<msg timestamp="20190924 17:43:33.925" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/elements {"using": "css selector", "value": "[id=\"btnLogin\"]"}</msg>
+<msg timestamp="20190924 17:43:33.938" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20190924 17:43:33.939" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:33.939" level="DEBUG">GET http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/4122c82c-4781-4ccb-81ee-25108bc70f97/name {"id": "4122c82c-4781-4ccb-81ee-25108bc70f97"}</msg>
+<msg timestamp="20190924 17:43:33.947" level="DEBUG">http://127.0.0.1:52283 "GET /session/ffa5ef7eefc066f1e844b3c9da385205/element/4122c82c-4781-4ccb-81ee-25108bc70f97/name HTTP/1.1" 200 17</msg>
+<msg timestamp="20190924 17:43:33.948" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:33.948" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/element/4122c82c-4781-4ccb-81ee-25108bc70f97/click {"id": "4122c82c-4781-4ccb-81ee-25108bc70f97"}</msg>
+<msg timestamp="20190924 17:43:34.000" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/element/4122c82c-4781-4ccb-81ee-25108bc70f97/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:34.000" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:33.924" endtime="20190924 17:43:34.000"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:33.924" endtime="20190924 17:43:34.001"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:33.918" endtime="20190924 17:43:34.001"></status>
+</kw>
+<kw name="Verify Login Page Error Message" library="SignIn">
+<arguments>
+<arg>${Credentials.ExpectedErrorMessage}</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:34.002" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/frame {"id": null}</msg>
+<msg timestamp="20190924 17:43:34.005" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/frame HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:34.005" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:34.006" level="DEBUG">POST http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205/elements {"using": "xpath", "value": "//*[contains(., '')]"}</msg>
+<msg timestamp="20190924 17:43:34.033" level="DEBUG">http://127.0.0.1:52283 "POST /session/ffa5ef7eefc066f1e844b3c9da385205/elements HTTP/1.1" 200 12177</msg>
+<msg timestamp="20190924 17:43:34.033" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:34.034" level="INFO">Current page contains text ''.</msg>
+<status status="PASS" starttime="20190924 17:43:34.002" endtime="20190924 17:43:34.034"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:34.035" level="INFO"></msg>
+<status status="PASS" starttime="20190924 17:43:34.035" endtime="20190924 17:43:34.035"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:34.001" endtime="20190924 17:43:34.035"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:33.754" endtime="20190924 17:43:34.035"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<msg timestamp="20190924 17:43:34.037" level="DEBUG">Closing browser with session id ffa5ef7eefc066f1e844b3c9da385205.</msg>
+<msg timestamp="20190924 17:43:34.037" level="DEBUG">DELETE http://127.0.0.1:52283/session/ffa5ef7eefc066f1e844b3c9da385205 {}</msg>
+<msg timestamp="20190924 17:43:34.162" level="DEBUG">http://127.0.0.1:52283 "DELETE /session/ffa5ef7eefc066f1e844b3c9da385205 HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:34.163" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:34.037" endtime="20190924 17:43:36.343"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:34.036" endtime="20190924 17:43:36.343"></status>
+</kw>
+<tags>
+<tag>multi</tag>
+</tags>
+<status status="PASS" starttime="20190924 17:43:27.401" endtime="20190924 17:43:36.343" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Valid users should be able to login to account">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>30 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20190924 17:43:36.343" endtime="20190924 17:43:36.343"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190924 17:43:36.343" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg timestamp="20190924 17:43:36.890" level="DEBUG">POST http://127.0.0.1:52310/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}}</msg>
+<msg timestamp="20190924 17:43:36.890" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:52310</msg>
+<msg timestamp="20190924 17:43:38.695" level="DEBUG">http://127.0.0.1:52310 "POST /session HTTP/1.1" 200 681</msg>
+<msg timestamp="20190924 17:43:38.695" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:38.695" level="DEBUG">POST http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/timeouts {"script": 30000}</msg>
+<msg timestamp="20190924 17:43:38.695" level="DEBUG">http://127.0.0.1:52310 "POST /session/edc5acbce1ad105cd25ae6a7e20bd1b7/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:38.695" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:38.695" level="DEBUG">POST http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/timeouts {"implicit": 0}</msg>
+<msg timestamp="20190924 17:43:38.695" level="DEBUG">http://127.0.0.1:52310 "POST /session/edc5acbce1ad105cd25ae6a7e20bd1b7/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:38.695" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:38.710" level="DEBUG">POST http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/url {"url": "about:blank"}</msg>
+<msg timestamp="20190924 17:43:38.738" level="DEBUG">http://127.0.0.1:52310 "POST /session/edc5acbce1ad105cd25ae6a7e20bd1b7/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:38.739" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:38.739" level="DEBUG">Opened browser with session id edc5acbce1ad105cd25ae6a7e20bd1b7.</msg>
+<status status="PASS" starttime="20190924 17:43:36.343" endtime="20190924 17:43:38.739"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20190924 17:43:38.740" level="DEBUG">POST http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/window/maximize {}</msg>
+<msg timestamp="20190924 17:43:39.885" level="DEBUG">http://127.0.0.1:52310 "POST /session/edc5acbce1ad105cd25ae6a7e20bd1b7/window/maximize HTTP/1.1" 200 51</msg>
+<msg timestamp="20190924 17:43:39.885" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:38.740" endtime="20190924 17:43:39.885"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:36.343" endtime="20190924 17:43:39.885"></status>
+</kw>
+<kw name="Login to Account" library="LoginApp">
+<arguments>
+<arg>${ADMIN_USER}</arg>
+</arguments>
+<kw name="Navigate to Landing Page" library="LoginApp">
+<kw name="Navigate to" library="Landing">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:39.885" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<msg timestamp="20190924 17:43:39.885" level="DEBUG">POST http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/url {"url": "https://opensource-demo.orangehrmlive.com/"}</msg>
+<msg timestamp="20190924 17:43:40.576" level="DEBUG">http://127.0.0.1:52310 "POST /session/edc5acbce1ad105cd25ae6a7e20bd1b7/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:40.577" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:39.885" endtime="20190924 17:43:40.577"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:39.885" endtime="20190924 17:43:40.577"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:39.885" endtime="20190924 17:43:40.578"></status>
+</kw>
+<kw name="Fill In Login Credentials" library="SignIn">
+<arguments>
+<arg>${UserData}</arg>
+</arguments>
+<kw name="Fill Username" library="SignIn">
+<arguments>
+<arg>${UserData.UserName}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_USER_INPUT}</arg>
+<arg>${Username}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:40.580" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<msg timestamp="20190924 17:43:40.581" level="DEBUG">POST http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/elements {"using": "css selector", "value": "[id=\"txtUsername\"]"}</msg>
+<msg timestamp="20190924 17:43:40.599" level="DEBUG">http://127.0.0.1:52310 "POST /session/edc5acbce1ad105cd25ae6a7e20bd1b7/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20190924 17:43:40.600" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:40.600" level="DEBUG">POST http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/element/9ca8d098-818e-4820-bf13-da89ff937673/clear {"id": "9ca8d098-818e-4820-bf13-da89ff937673"}</msg>
+<msg timestamp="20190924 17:43:40.631" level="DEBUG">http://127.0.0.1:52310 "POST /session/edc5acbce1ad105cd25ae6a7e20bd1b7/element/9ca8d098-818e-4820-bf13-da89ff937673/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:40.631" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:40.632" level="DEBUG">POST http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/element/9ca8d098-818e-4820-bf13-da89ff937673/value {"text": "Admin", "value": ["A", "d", "m", "i", "n"], "id": "9ca8d098-818e-4820-bf13-da89ff937673"}</msg>
+<msg timestamp="20190924 17:43:40.684" level="DEBUG">http://127.0.0.1:52310 "POST /session/edc5acbce1ad105cd25ae6a7e20bd1b7/element/9ca8d098-818e-4820-bf13-da89ff937673/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:40.685" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:40.580" endtime="20190924 17:43:40.685"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:40.579" endtime="20190924 17:43:40.685"></status>
+</kw>
+<kw name="Fill Password" library="SignIn">
+<arguments>
+<arg>${UserData.Password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_PASSWORD_INPUT}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:40.687" level="INFO">Typing text 'admin123' into text field 'id=txtPassword'.</msg>
+<msg timestamp="20190924 17:43:40.687" level="DEBUG">POST http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/elements {"using": "css selector", "value": "[id=\"txtPassword\"]"}</msg>
+<msg timestamp="20190924 17:43:40.706" level="DEBUG">http://127.0.0.1:52310 "POST /session/edc5acbce1ad105cd25ae6a7e20bd1b7/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20190924 17:43:40.706" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:40.707" level="DEBUG">POST http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/element/6a7c71f8-5c92-4c98-ad66-cac85b0f6c19/clear {"id": "6a7c71f8-5c92-4c98-ad66-cac85b0f6c19"}</msg>
+<msg timestamp="20190924 17:43:40.735" level="DEBUG">http://127.0.0.1:52310 "POST /session/edc5acbce1ad105cd25ae6a7e20bd1b7/element/6a7c71f8-5c92-4c98-ad66-cac85b0f6c19/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:40.735" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:40.736" level="DEBUG">POST http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/element/6a7c71f8-5c92-4c98-ad66-cac85b0f6c19/value {"text": "admin123", "value": ["a", "d", "m", "i", "n", "1", "2", "3"], "id": "6a7c71f8-5c92-4c98-ad66-cac85b0f6c19"}</msg>
+<msg timestamp="20190924 17:43:40.791" level="DEBUG">http://127.0.0.1:52310 "POST /session/edc5acbce1ad105cd25ae6a7e20bd1b7/element/6a7c71f8-5c92-4c98-ad66-cac85b0f6c19/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:40.791" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:40.687" endtime="20190924 17:43:40.792"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:40.685" endtime="20190924 17:43:40.792"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:40.578" endtime="20190924 17:43:40.792"></status>
+</kw>
+<kw name="Click Login" library="SignIn">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20190924 17:43:40.793" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<msg timestamp="20190924 17:43:40.794" level="DEBUG">POST http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/elements {"using": "css selector", "value": "[id=\"btnLogin\"]"}</msg>
+<msg timestamp="20190924 17:43:40.808" level="DEBUG">http://127.0.0.1:52310 "POST /session/edc5acbce1ad105cd25ae6a7e20bd1b7/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20190924 17:43:40.809" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:40.809" level="DEBUG">GET http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/element/d8f7b010-43d6-4492-8d8a-dfeebfe3d32b/name {"id": "d8f7b010-43d6-4492-8d8a-dfeebfe3d32b"}</msg>
+<msg timestamp="20190924 17:43:40.815" level="DEBUG">http://127.0.0.1:52310 "GET /session/edc5acbce1ad105cd25ae6a7e20bd1b7/element/d8f7b010-43d6-4492-8d8a-dfeebfe3d32b/name HTTP/1.1" 200 17</msg>
+<msg timestamp="20190924 17:43:40.815" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190924 17:43:40.815" level="DEBUG">POST http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7/element/d8f7b010-43d6-4492-8d8a-dfeebfe3d32b/click {"id": "d8f7b010-43d6-4492-8d8a-dfeebfe3d32b"}</msg>
+<msg timestamp="20190924 17:43:41.827" level="DEBUG">http://127.0.0.1:52310 "POST /session/edc5acbce1ad105cd25ae6a7e20bd1b7/element/d8f7b010-43d6-4492-8d8a-dfeebfe3d32b/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:41.827" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:40.793" endtime="20190924 17:43:41.827"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:40.792" endtime="20190924 17:43:41.828"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:39.885" endtime="20190924 17:43:41.828"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<msg timestamp="20190924 17:43:41.829" level="DEBUG">Closing browser with session id edc5acbce1ad105cd25ae6a7e20bd1b7.</msg>
+<msg timestamp="20190924 17:43:41.829" level="DEBUG">DELETE http://127.0.0.1:52310/session/edc5acbce1ad105cd25ae6a7e20bd1b7 {}</msg>
+<msg timestamp="20190924 17:43:41.941" level="DEBUG">http://127.0.0.1:52310 "DELETE /session/edc5acbce1ad105cd25ae6a7e20bd1b7 HTTP/1.1" 200 14</msg>
+<msg timestamp="20190924 17:43:41.942" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20190924 17:43:41.829" endtime="20190924 17:43:44.064"></status>
+</kw>
+<status status="PASS" starttime="20190924 17:43:41.828" endtime="20190924 17:43:44.064"></status>
+</kw>
+<tags>
+<tag>Login</tag>
+</tags>
+<status status="PASS" starttime="20190924 17:43:36.343" endtime="20190924 17:43:44.065" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190924 17:43:15.102" endtime="20190924 17:43:44.068"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">landing</stat>
+<stat pass="1" fail="0">Login</stat>
+<stat pass="1" fail="0">multi</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="Login Test">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

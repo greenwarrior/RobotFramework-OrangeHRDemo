@@ -6,7 +6,7 @@ import pdb
 bi = BuiltIn()
 #s2l = bi.get_library_instance('Selenium2Library')
 
-def enter_text(element,value):
+def enter_text_key_press(element,value):
     bi.run_keyword('Input Text', element, value)
     bi.run_keyword('Press Key', element, '\\\\13')
     #pdb.set_trace()
